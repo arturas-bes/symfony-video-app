@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190925152242.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/VideoRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/symfony-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-application.iml" afterDir="false" />
@@ -11,26 +16,7 @@
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/categories.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/edit_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/includes/_footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/includes/_header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/upload_video.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/upload_video.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/videos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/payment.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/payment.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/pricing.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pricing.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/search_results.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/search_results.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/video_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/video_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_list.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,13 +96,20 @@
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1RIKpHIbVCGMYyfEHdLAEOyvYRt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -153,7 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569349350558</updated>
       <workItem from="1569349351682" duration="2059000" />
-      <workItem from="1569416565900" duration="7607000" />
+      <workItem from="1569416565900" duration="9047000" />
     </task>
     <servers />
   </component>
@@ -170,5 +163,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
