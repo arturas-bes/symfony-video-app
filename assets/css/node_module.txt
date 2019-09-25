@@ -1,0 +1,14 @@
+commands
+
+npm install @symfony/webpack-encore --save-dev
+
+init before using
+ npm init
+
+move assets to minified folders
+./node_modules/.bin/encore production
+
+watch for changes
+
+./node_modules/.bin/encore dev --watch
+

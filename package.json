@@ -1,0 +1,23 @@
+{
+  "name": "symfony-video-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.28.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachaliuga/symfony-video-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachaliuga/symfony-video-app/issues"
+  },
+  "homepage": "https://github.com/nachaliuga/symfony-video-app#readme"
+}
