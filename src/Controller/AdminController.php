@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
+use App\Utils\CategoryTreeAdminList;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin")
@@ -19,18 +22,41 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/categories", name="categories")
+     * @param CategoryTreeAdminList $categories
+     * @return Response
      */
-    public function categories()
+    public function categories(CategoryTreeAdminList $categories)
     {
-        return $this->render('admin/categories.html.twig');
+        // we dont use an argument because default category is null
+        $categories->getCategoryList($categories->buildTree());
+        dump($categories);
+        return $this->render('admin/categories.html.twig',[
+            'categories' => $categories->categoryList
+        ]);
     }
 
     /**
-     * @Route("/edit-category", name="edit_category")
+     * @Route("/edit-category/{id}", name="edit_category")
      */
     public function editCategory()
     {
         return $this->render('admin/edit_category.html.twig');
+    }
+
+    /**
+     * @Route("/delete-category{id}", name="delete_category")
+     * We dont use direct id as an argument because Symfony direct param
+     * converter is used it takes object and returns its id
+     * @param Category $category
+     * @return Response
+     */
+    public function deleteCategory(Category $category)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($category);
+        $em->flush();
+
+        return $this->redirectToRoute('categories');
     }
 
     /**

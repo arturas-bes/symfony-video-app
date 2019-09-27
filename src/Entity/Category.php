@@ -26,6 +26,8 @@ class Category
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="subcategories")
+     * //join column name parent id and equavalent in the second table referenced column name id
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
