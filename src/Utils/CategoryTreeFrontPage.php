@@ -40,7 +40,7 @@ class CategoryTreeFrontPage extends CategoryTreeAbstract
     /**
      * @var AppExtension
      */
-    private $slugger;
+    public $slugger;
     /**
      * @var
      */
@@ -57,6 +57,7 @@ class CategoryTreeFrontPage extends CategoryTreeAbstract
 
     public function getCategoryListAndParent(int $id): string
     {
+
         $this->slugger = new AppExtension; // App extension to slugify categories urls
 
         $parentData = $this->getMainParent($id);  // Main parent of subcategory
@@ -70,6 +71,7 @@ class CategoryTreeFrontPage extends CategoryTreeAbstract
 
         // builds array for generating nested html list
         $categories_array = $this->buildTree($parentData['id']);
+
         return $this->getCategoryList($categories_array);
     }
 

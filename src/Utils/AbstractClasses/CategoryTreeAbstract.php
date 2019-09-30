@@ -4,7 +4,6 @@ namespace App\Utils\AbstractClasses;
 
 use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityManagerInterface;
-use mysql_xdevapi\Exception;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 abstract class CategoryTreeAbstract {
@@ -34,17 +33,13 @@ abstract class CategoryTreeAbstract {
     /**
      * @var UrlGeneratorInterface
      */
-    protected $urlGenerator;
+    public $urlGenerator;
 
     public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator)
     {
         $this->entityManager = $entityManager;
         $this->urlGenerator = $urlGenerator;
-        try {
-            $this->categoriesArrayFromDb = $this->getCategories();
-        } catch (DBALException $e) {
-            throw new Exception('Cannot get categories '.$e);
-        }
+        $this->categoriesArrayFromDb = $this->getCategories();
     }
 
     /**
