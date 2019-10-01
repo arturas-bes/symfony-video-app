@@ -22,7 +22,6 @@ class CategoryTest extends KernelTestCase
         );
         foreach($tested_classes as $class)
         {
-
             if($class == 'CategoryTreeAdminOptionList') {
                 $name = 'mocked'.$class;
                 $this->$name = $this->getMockBuilder('App\Utils\\'.$class)
@@ -60,11 +59,22 @@ class CategoryTest extends KernelTestCase
      */
     public function testCategoryTreeAdminOptionList($arrayFromDb, $arrayToCompare)
     {
-        $this->mockedCategoryTreeAdminOptionList->categoriesArrayFromDb = $arrayFromDb;
-        $arrayFromDb = $this->mockedCategoryTreeAdminOptionList->buildTree();
-        $this->assertSame($arrayToCompare, $this->mockedCategoryTreeAdminOptionList->getCategoryList($arrayFromDb));
+        $this->mockedCategoryTreeAdminOptionList->categoriesArrayFromDb = $arrayToCompare;
+        $arrayToCompare = $this->mockedCategoryTreeAdminOptionList->buildTree();
+       $this->assertSame($arrayToCompare, $this->mockedCategoryTreeAdminOptionList->getCategoryList($arrayFromDb));
     }
 
+    /**
+     * @param $string
+     * @param $array
+     * @dataProvider dataForCategoryTreeAdminList
+     */
+    public function testCategoryTreeAdminList($string, $array)
+    {
+        $this->mockedCategoryTreeAdminList->categoriesArrayFromDb = $array;
+        $array = $this->mockedCategoryTreeAdminList->buildTree();
+        $this->assertSame($string, $this->mockedCategoryTreeAdminList->getCategoryList($array));
+    }
 
     public function dataForCategoryTreeFrontPage()
     {
@@ -129,7 +139,16 @@ class CategoryTest extends KernelTestCase
                 ['name'=>'Computers','id'=>6, 'parent_id'=>1],
                 ['name'=>'Laptops','id'=>8, 'parent_id'=>6],
                 ['name'=>'HP','id'=>14, 'parent_id'=>8]
-            ],
+            ]
+        ];
+    }
+
+    public function dataForCategoryTreeAdminList()
+    {
+        yield ['<ul class="fa-ul text-left"><li><i class="fa-li fa fa-arrow-right"></i>Toys<a href="/admin/edit-category/2"> Edit</a> <a onclick="return confirm(\'Are you sure?\');"
+    href="/admin/delete-category2">Delete</a></li></ul>',
+
+           [ ["id" => "2","parent_id" => null, "name" => "Toys"] ],
         ];
     }
 }

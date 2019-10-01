@@ -93,6 +93,9 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "facebook/webdriver": {
+        "version": "1.7.1"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -129,6 +132,9 @@
     "symfony/asset": {
         "version": "v4.3.4"
     },
+    "symfony/browser-kit": {
+        "version": "v4.3.4"
+    },
     "symfony/cache": {
         "version": "v4.3.4"
     },
@@ -151,6 +157,9 @@
             "config/bootstrap.php"
         ]
     },
+    "symfony/css-selector": {
+        "version": "v4.3.4"
+    },
     "symfony/debug": {
         "version": "v4.3.4"
     },
@@ -170,6 +179,9 @@
         "version": "v4.3.4"
     },
     "symfony/doctrine-bridge": {
+        "version": "v4.3.4"
+    },
+    "symfony/dom-crawler": {
         "version": "v4.3.4"
     },
     "symfony/dotenv": {
@@ -221,6 +233,12 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client": {
+        "version": "v4.3.4"
+    },
+    "symfony/http-client-contracts": {
+        "version": "v1.1.6"
+    },
     "symfony/http-foundation": {
         "version": "v4.3.4"
     },
@@ -250,6 +268,9 @@
     },
     "symfony/orm-pack": {
         "version": "v1.0.6"
+    },
+    "symfony/panther": {
+        "version": "v0.5.2"
     },
     "symfony/phpunit-bridge": {
         "version": "4.3",
@@ -311,6 +332,9 @@
     },
     "symfony/stopwatch": {
         "version": "v4.3.4"
+    },
+    "symfony/test-pack": {
+        "version": "v1.0.6"
     },
     "symfony/translation-contracts": {
         "version": "v1.1.6"

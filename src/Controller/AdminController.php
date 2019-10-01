@@ -31,10 +31,12 @@ class AdminController extends AbstractController
      */
     public function categories(CategoryTreeAdminList $categories, Request $request)
     {
+
+
         // we dont use an argument because default category is null
         $categories->getCategoryList($categories->buildTree());
-
         //build category form
+        dump($categories);
         $category = new Category();
         $form = $this->createForm(CategoryType::class, $category);
         $is_invalid = null;
