@@ -8,6 +8,7 @@
         "doctrine/annotations": "^1.7",
         "knplabs/knp-paginator-bundle": "^4.0",
         "sensio/framework-extra-bundle": "^5.4",
+        "sensiolabs/security-checker": "^6.0",
         "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",
         "symfony/dotenv": "4.3.*",
@@ -15,6 +16,7 @@
         "symfony/form": "4.3.*",
         "symfony/framework-bundle": "4.3.*",
         "symfony/orm-pack": "^1.0",
+        "symfony/security-bundle": "4.3.*",
         "symfony/translation": "4.3.*",
         "symfony/twig-bundle": "4.3.*",
         "symfony/validator": "4.3.*",
@@ -60,7 +62,8 @@
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd",
+            "security-checker security:check": "script"
         },
         "post-install-cmd": [
             "@auto-scripts"

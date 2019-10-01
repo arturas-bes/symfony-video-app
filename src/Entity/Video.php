@@ -36,6 +36,8 @@ class Video
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="videos")
+     * Issue with forgein key constraint can be solved like this and in the controller
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $category;
 

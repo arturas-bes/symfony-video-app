@@ -24,7 +24,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/categories", name="categories", methods={"GET", "POST"})
+     * @Route("/su/categories", name="categories", methods={"GET", "POST"})
      * @param CategoryTreeAdminList $categories
      * @param Request $request
      * @return Response
@@ -57,7 +57,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/edit-category/{id}", name="edit_category", methods={"GET", "POST"})
+     * @Route("/su/edit-category/{id}", name="edit_category", methods={"GET", "POST"})
      * @param Category $category
      * @param Request $request
      * @return Response
@@ -83,7 +83,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/delete-category{id}", name="delete_category")
+     * @Route("/su/delete-category/{id}", name="delete_category")
      * We dont use direct id as an argument because Symfony direct param
      * converter is used it takes object and returns its id
      * @param Category $category
@@ -107,7 +107,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/upload-video", name="upload_video")
+     * @Route("/su/upload-video", name="upload_video")
      */
     public function uploadVideo()
     {
@@ -115,7 +115,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/users", name="users")
+     * @Route("/su/users", name="users")
      */
     public function users()
     {
@@ -124,6 +124,8 @@ class AdminController extends AbstractController
 
     public function getAllCategories(CategoryTreeOptionList $categories, $editedCategory = null)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $categories->getCategoryList($categories->buildTree());
 
         return $this->render('admin/helper/_all_categories_option_list.html.twig', [
