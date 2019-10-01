@@ -126,4 +126,17 @@ class CategoryTreeFrontPage extends CategoryTreeAbstract
 //          child2
 //              child3....
 
+    public function getChildIds(int $parent): array
+    {
+        static $ids = []; // static needed so after every recursive iteration array wont be empty
+        foreach ($this->categoriesArrayFromDb as $val) {
+
+            if ($val['parent_id'] == $parent) {
+                $ids[] = $val['id'].',';
+                $this->getChildIds($val['id']);
+            }
+        }
+        return $ids;
+    }
 }
+

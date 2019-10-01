@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Video;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use Knp\Component\Pager\PaginatorInterface;
 
 /**
  * @method Video|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,37 +15,52 @@ use Doctrine\Common\Persistence\ManagerRegistry;
  */
 class VideoRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    /**
+     * @var PaginatorInterface
+     */
+    private $paginator;
+
+    public function __construct(ManagerRegistry $registry, PaginatorInterface $paginator)
     {
         parent::__construct($registry, Video::class);
+
+        $this->paginator = $paginator;
     }
 
-    // /**
-    //  * @return Video[] Returns an array of Video objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findByChildIds(array $values, int $page, ?string $sort_method)
     {
-        return $this->createQueryBuilder('v')
-            ->andWhere('v.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('v.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $sort_method = $sort_method != 'rating' ? $sort_method : 'ASC'; //tmp
+        $dbquery = $this->createQueryBuilder('v')
+            ->andWhere('v.category IN (:val)')
+            ->setParameter('val', $values)
+            ->orderBy('v.title', $sort_method)
+            ->getQuery();
+        $pagination = $this->paginator->paginate($dbquery, $page, 5); // last number is default value of paginated items on page
 
-    /*
-    public function findOneBySomeField($value): ?Video
-    {
-        return $this->createQueryBuilder('v')
-            ->andWhere('v.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        return $pagination;
     }
-    */
+
+    public function findByTitle(string $query, int $page, ?string $sort_method)
+    {
+        $sort_method = $sort_method != 'rating' ? $sort_method : 'ASC'; //tmp
+
+        $queryBuilder = $this->createQueryBuilder('v');
+
+        $searchTerms = $this->prepareQuery($query);
+
+        foreach ($searchTerms as $key => $term) {
+            $queryBuilder
+                ->orWhere('v.title LIKE :t_'.$key)
+                ->setParameter('t_'.$key, '%'.trim($term).'%');
+        }
+        $dbQuery = $queryBuilder
+            ->orderBy('v.title', $sort_method)
+            ->getQuery();
+        return $this->paginator->paginate($dbQuery, $page, 5);
+    }
+
+    private function prepareQuery(string $query): array
+    {
+        return explode(' ', $query);
+    }
 }
