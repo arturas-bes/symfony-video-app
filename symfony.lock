@@ -1,4 +1,16 @@
 {
+    "dama/doctrine-test-bundle": {
+        "version": "4.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "4.0",
+            "ref": "56eaa387b5e48ebcc7c95a893b47dfa1ad51449c"
+        },
+        "files": [
+            "config/packages/test/dama_doctrine_test_bundle.yaml"
+        ]
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -104,6 +116,9 @@
     },
     "knplabs/knp-paginator-bundle": {
         "version": "v4.0.0"
+    },
+    "knplabs/knp-time-bundle": {
+        "version": "v1.9.1"
     },
     "nikic/php-parser": {
         "version": "v4.2.4"
@@ -373,6 +388,9 @@
         "version": "v1.1.6"
     },
     "symfony/stopwatch": {
+        "version": "v4.3.4"
+    },
+    "symfony/templating": {
         "version": "v4.3.4"
     },
     "symfony/test-pack": {

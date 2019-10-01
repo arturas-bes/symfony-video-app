@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/security_checker.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191001133521.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/AdminControllerSecurityTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/FrontControllerSecurityTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/dama_doctrine_test_bundle.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CommentFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191001154832.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CommentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Controllers/FrontControllerCommentsTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Rollback.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/symfony-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191001083721.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191001133521.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VideoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VideoRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/videos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/video_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_details.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controllers/AdminControllerCategoriesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/AdminControllerCategoriesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Utils/CategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Utils/CategoryTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +135,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-time-bundle" />
+      <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1RIKpHIbVCGMYyfEHdLAEOyvYRt" />
@@ -195,7 +189,7 @@
       <workItem from="1569349351682" duration="2059000" />
       <workItem from="1569416565900" duration="47594000" />
       <workItem from="1569853488400" duration="648000" />
-      <workItem from="1569913191651" duration="24165000" />
+      <workItem from="1569913191651" duration="30252000" />
     </task>
     <servers />
   </component>

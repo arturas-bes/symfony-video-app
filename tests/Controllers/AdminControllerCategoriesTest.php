@@ -1,6 +1,7 @@
 <?php
 namespace App\Tests\Controller;
 
+use App\Tests\Rollback;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use App\Entity\Category;
@@ -8,29 +9,31 @@ use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class AdminControllerCategoriesTest extends WebTestCase
 {
-    public function setUp()
-    {
-    parent::setUp();
-        $this->client = static::createClient([], [
-            'PHP_AUTH_USER' => 'john@gmail.com',
-            'PHP_AUTH_PW' => 'password',
-        ]);
+    use Rollback;
 
-    $this->client->disableReboot(); // prevents from shutting down the kernel between test request and thus losing transactions
-    $this->entityManager = $this->client->getContainer()->get('doctrine.orm.entity_manager');
-    // these lines helps isolate databse so it will roll back after request is done
-    $this->entityManager->beginTransaction();
-    $this->entityManager->getConnection()->setAutoCommit(false);
-    }
+//    public function setUp()
+//    {
+//    parent::setUp();
+//        $this->client = static::createClient([], [
+//            'PHP_AUTH_USER' => 'john@gmail.com',
+//            'PHP_AUTH_PW' => 'password',
+//        ]);
+//
+//    $this->client->disableReboot(); // prevents from shutting down the kernel between test request and thus losing transactions
+//    $this->entityManager = $this->client->getContainer()->get('doctrine.orm.entity_manager');
+//    // these lines helps isolate databse so it will roll back after request is done
+//    $this->entityManager->beginTransaction();
+//    $this->entityManager->getConnection()->setAutoCommit(false);
+//    }
 
-    public function tearDown()
-    {
-        parent::tearDown();
-        // these lines helps isolate databse so it will roll back after request is done
-        $this->entityManager->rollBack();
-        $this->entityManager->close();
-        $this->entityManager = null; // avoid memory leaks
-    }
+//    public function tearDown()
+//    {
+//        parent::tearDown();
+//        // these lines helps isolate databse so it will roll back after request is done
+//        $this->entityManager->rollBack();
+//        $this->entityManager->close();
+//        $this->entityManager = null; // avoid memory leaks
+//    }
 
     public function testTextOnPage()
     {

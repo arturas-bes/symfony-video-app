@@ -63,4 +63,20 @@ class VideoRepository extends ServiceEntityRepository
     {
         return explode(' ', $query);
     }
+
+    public function videoDetails($id)
+    {
+        //this way we use one query to load all three tables if we remove ->addSelect()
+        // we gonna go for lazy load which means it will be load if we request it in twig template but
+        // it gonna cost more transactions form DB
+
+        return $this->createQueryBuilder('v')
+            ->leftJoin('v.comments', 'c')
+            ->leftJoin('c.user', 'u')
+            ->addSelect('c', 'u')
+            ->where('v.id = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }
