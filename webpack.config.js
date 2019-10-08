@@ -7,7 +7,7 @@ Encore
     .setPublicPath('/assets')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
-
+    .addEntry('js/likes', './assets/js/likes.js')
     /*
      * ENTRY CONFIG
      *
@@ -19,6 +19,7 @@ Encore
      */
     .addStyleEntry('css/dashboard', ['./assets/css/dashboard.css'])
     .addStyleEntry('css/login', ['./assets/css/login.css'])
+    .addStyleEntry('css/likes', ['./assets/css/likes.css'])
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
