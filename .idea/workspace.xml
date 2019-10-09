@@ -2,28 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/CategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/SuperAdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Traits/Likes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191009075230.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerLikesTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/RoleAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/RoleUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SubscriptionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Traits/SaveSubscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/SubscriptionFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Subscribtion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191009135458.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SubscribtionRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/VideoForNoValidSubscribtion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/helper/cart.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/subscription/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191002114655.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/categories.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/categories.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tests.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/AdminControllerCategoriesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerCategoriesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/AdminControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/FrontControllerCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCommentsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/FrontControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerSecurityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/FrontControllerVideoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerVideoTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191009082447.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/payment.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/payment.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/pricing.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/pricing.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/video_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usefullSymfonyCommands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usefullSymfonyCommands.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +203,8 @@
       <workItem from="1569853488400" duration="648000" />
       <workItem from="1569913191651" duration="34514000" />
       <workItem from="1570454595713" duration="50000" />
-      <workItem from="1570540276772" duration="14005000" />
+      <workItem from="1570540276772" duration="17051000" />
+      <workItem from="1570625607302" duration="8577000" />
     </task>
     <servers />
   </component>

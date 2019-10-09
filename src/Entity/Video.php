@@ -14,7 +14,8 @@ use Doctrine\ORM\Mapping\Index as Index;
  */
 class Video
 {
-    public const videoForNotLoggedIn = 113716040; //vimeo video id
+    //public const videoForNotLoggedIn = 113716040; //vimeo video id
+    public const videoForNotLoggedInOrNoMembers = 113716040; //vimeo video id
     public const VimeoPath = 'https://player.vimeo.com/video/';
     public const perPage = 5; //pagination items on page
 
@@ -95,11 +96,9 @@ class Video
         return $this->path;
     }
 
-    public function getVimeoId($user): ?string
+    public function getVimeoId(): ?string
     {
-        if (!$user) {
-            return self::VimeoPath.self::videoForNotLoggedIn;
-        }
+
         return $this->path;
     }
     public function setPath(string $path): self

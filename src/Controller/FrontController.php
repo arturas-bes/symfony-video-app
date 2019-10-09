@@ -8,10 +8,12 @@ use App\Entity\Comment;
 use App\Entity\Video;
 use App\Repository\VideoRepository;
 use App\Utils\CategoryTreeFrontPage;
+use App\Utils\VideoForNoValidSubscribtion;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class FrontController extends AbstractController
 {
@@ -34,9 +36,16 @@ class FrontController extends AbstractController
      * @param $page
      * @param CategoryTreeFrontPage $categories
      * @param Request $request
+     * @param VideoForNoValidSubscribtion $video_no_members
      * @return Response
      */
-    public function videoList($id, $page, CategoryTreeFrontPage $categories, Request $request)
+    public function videoList(
+        $id,
+        $page,
+        CategoryTreeFrontPage $categories,
+        Request $request,
+        VideoForNoValidSubscribtion $video_no_members
+    )
     {
         $categories->getCategoryListAndParent($id);
         $ids = $categories->getChildIds($id);
@@ -51,6 +60,7 @@ class FrontController extends AbstractController
         return $this->render('front/video_list.html.twig', [
             'subcategories' => $categories,
             'videos' => $videos,
+            'video_no_members' => $video_no_members->check()
         ]);
     }
 
@@ -58,13 +68,15 @@ class FrontController extends AbstractController
      * @Route("/video-details/{video}", name="video_details")
      * @param VideoRepository $repository
      * @param $video
+     * @param VideoForNoValidSubscribtion $video_no_members
      * @return Response
      */
-    public function videoDetails(VideoRepository $repository, $video)
+    public function videoDetails(VideoRepository $repository, $video, VideoForNoValidSubscribtion $video_no_members)
     {
 
         return $this->render('front/video_details.html.twig',[
             'video' => $repository->videoDetails($video),
+            'video_no_members' => $video_no_members->check()
         ]);
     }
 
@@ -75,9 +87,10 @@ class FrontController extends AbstractController
      *      name="search_results")
      * @param $page
      * @param Request $request
+     * @param VideoForNoValidSubscribtion $video_no_members
      * @return Response
      */
-    public function searchResults($page, Request $request)
+    public function searchResults($page, Request $request, VideoForNoValidSubscribtion $video_no_members)
     {
         $videos = null;
         $query = null;
@@ -92,27 +105,8 @@ class FrontController extends AbstractController
 
         return $this->render('front/search_results.html.twig', [
             'videos' => $videos,
-            'query' => $query
-        ]);
-    }
-
-    /**
-     * @Route("/pricing", name="pricing")
-     */
-    public function pricing()
-    {
-        return $this->render('front/pricing.html.twig', [
-            'controller_name' => 'FrontController',
-        ]);
-    }
-
-    /**
-     * @Route("/payment", name="payment")
-     */
-    public function payment()
-    {
-        return $this->render('front/payment.html.twig', [
-            'controller_name' => 'FrontController',
+            'query' => $query,
+            'video_no_members' => $video_no_members->check()
         ]);
     }
 

@@ -1,1 +1,16 @@
+
+
 bin/console doctrine:schema:drop -n -q --force --full-database && rm src/Migrations/*.php && bin/console make:migration && bin/console doctrine:migrations:migrate -n -q && bin/console doctrine:fixtures:load -n -q
+
+
+Store session data in RAM memory
+
+sudo apt-get install redis-server
+sudo apt-get install php-redis
+
+sudo nano /etc/redis/redis.conf
+maxmemory 128mb
+maxmemory-policy allkeys-lru
+
+sudo systemctl enable redis-server.service
+sudo service apache2 restart

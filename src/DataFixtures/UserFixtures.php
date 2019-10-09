@@ -42,6 +42,7 @@ class UserFixtures extends Fixture
             ['Keven', 'Baker', 'keven@gmail.com', 'password', null, ['ROLE_USER']],
             ['admin', 'admin', 'admin@admin.com', 'kaskas', 'hjd8dehdh', ['ROLE_USER', 'ROLE_ADMIN']],
             ['user', 'user', 'user@user.com', 'kaskas', null, ['ROLE_USER']],
+            ['Ted', 'Bundy', 'ted@user.com', 'password', null, ['ROLE_USER']],
         ];
     }
 }

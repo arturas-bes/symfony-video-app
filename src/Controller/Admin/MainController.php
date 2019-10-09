@@ -19,7 +19,9 @@ class MainController extends AbstractController
      */
     public function index()
     {
-        return $this->render('admin/my_profile.html.twig');
+        return $this->render('admin/my_profile.html.twig',[
+            'subscription' => $this->getUser()->getSubscription()
+        ]);
     }
 
     /**
@@ -53,5 +55,23 @@ class MainController extends AbstractController
             'editedCategory' => $editedCategory
 
         ]);
+    }
+
+    /**
+     * @Route("/cancel-plan", name="cancel_plan")
+     */
+    public function cancelPlan()
+    {
+        $user = $this->getUser();
+        $subscribition = $user->getSubscription();
+        $subscribition->setValidTo(new \DateTime());
+        $subscribition->setPaymentStatus(null);
+        $subscribition->setPlan('canceled');
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->persist($subscribition);
+        $em->flush();
+
+        return $this->redirectToRoute('admin_main_page');
     }
 }
