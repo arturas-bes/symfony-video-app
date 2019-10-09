@@ -1,7 +1,7 @@
 <?php
-namespace App\Tests\Controller;
+namespace App\Tests\Controller\Admin;
 
-use App\Tests\Rollback;
+use App\Tests\RoleAdmin;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
 use App\Entity\Category;
@@ -9,7 +9,7 @@ use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class AdminControllerCategoriesTest extends WebTestCase
 {
-    use Rollback;
+    use RoleAdmin;
 
 //    public function setUp()
 //    {

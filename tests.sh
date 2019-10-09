@@ -3,7 +3,7 @@
 #./tests.sh
 #./tests.sh /tests/FolderName
 #./tests.sh /tests/FolderName
-#./tests.sh -db
+#./tests.sh /tests -db
 
 if [ "$2" == "-db" ]
 then

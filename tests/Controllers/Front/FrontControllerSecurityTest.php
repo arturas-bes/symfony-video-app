@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Tests\Controllers;
+namespace App\Tests\Controller\Front;
+
 
 use Symfony\Component\Panther\PantherTestCase;
 
