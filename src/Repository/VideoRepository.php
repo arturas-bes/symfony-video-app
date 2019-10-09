@@ -29,20 +29,35 @@ class VideoRepository extends ServiceEntityRepository
 
     public function findByChildIds(array $values, int $page, ?string $sort_method)
     {
-        $sort_method = $sort_method != 'rating' ? $sort_method : 'ASC'; //tmp
-        $dbquery = $this->createQueryBuilder('v')
-            ->andWhere('v.category IN (:val)')
-            ->setParameter('val', $values)
-            ->orderBy('v.title', $sort_method)
-            ->getQuery();
-        $pagination = $this->paginator->paginate($dbquery, $page, 5); // last number is default value of paginated items on page
 
+        if ($sort_method != 'rating') {
+            $dbquery = $this->createQueryBuilder('v')
+                ->andWhere('v.category IN (:val)')
+                ->leftJoin('v.comments', 'c') // we have 23 queries on load without this join
+                ->addSelect('c') // we use eager load so query count on load would drop 18 quieries
+                ->leftJoin('v.usersThatLike', 'l')
+                ->leftJoin('v.usersThatDontLike', 'd')
+                ->addSelect('l', 'd') // 8 queries left
+                ->setParameter('val', $values)
+                ->orderBy('v.title', $sort_method);
+
+        } else {
+            $dbquery = $this->createQueryBuilder('v')
+                ->addSelect('COUNT(l) AS HIDDEN likes') //hidden hides likes array from dbquery, if its removed, the dump of query would be different so we would need to change twig template
+                ->leftJoin('v.usersThatLike', 'l')
+                ->andWhere('v.category IN (:val)')
+                ->setParameter('val', $values)
+                ->groupBy('v')
+                ->orderBy('likes', 'DESC');
+
+        }
+        $dbquery->getQuery();
+        $pagination = $this->paginator->paginate($dbquery, $page, Video::perPage); // last number is default value of paginated items on page
         return $pagination;
     }
 
     public function findByTitle(string $query, int $page, ?string $sort_method)
     {
-        $sort_method = $sort_method != 'rating' ? $sort_method : 'ASC'; //tmp
 
         $queryBuilder = $this->createQueryBuilder('v');
 
@@ -53,15 +68,38 @@ class VideoRepository extends ServiceEntityRepository
                 ->orWhere('v.title LIKE :t_'.$key)
                 ->setParameter('t_'.$key, '%'.trim($term).'%');
         }
-        $dbQuery = $queryBuilder
-            ->orderBy('v.title', $sort_method)
-            ->getQuery();
-        return $this->paginator->paginate($dbQuery, $page, 5);
+        if ($sort_method != 'rating') {
+            $dbQuery = $queryBuilder
+                ->leftJoin('v.comments', 'c')
+                ->leftJoin('v.usersThatLike', 'l')
+                ->leftJoin('v.usersThatDontLike', 'd')
+                ->addSelect('c', 'l', 'd')
+                ->orderBy('v.title', $sort_method);
+
+        } else {
+            $dbQuery = $this->createQueryBuilder('v')
+                ->addSelect('COUNT(l) AS HIDDEN likes', 'c', 'd')
+                ->leftJoin('v.usersThatLike', 'l')
+                ->leftJoin('v.comments', 'c')
+                ->leftJoin('v.usersThatDontLike', 'd')
+                ->groupBy('v', 'c', 'd')
+                ->orderBy('likes', 'DESC');
+        }
+        $dbQuery->getQuery();
+        return $this->paginator->paginate($dbQuery, $page, Video::perPage);
     }
 
     private function prepareQuery(string $query): array
-    {
-        return explode(' ', $query);
+    {   // using this for instance if we search home alone alone, our where clause
+        // would be repeated two times so it will slow down our
+        // query in this case we gonna use array_unique so we remove repeated string
+        $terms =  array_unique(explode(' ', $query));
+
+        return array_filter($terms, function ($term) {
+            // check if lenght of search query greater than two in case not its deleted from the array
+            // before this query "fa m " returned family and movies, now it returns only family videos
+            return 2<= mb_strlen($term);
+        });
     }
 
     public function videoDetails($id)

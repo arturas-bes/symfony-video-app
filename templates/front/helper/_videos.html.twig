@@ -19,7 +19,7 @@
                         <div class="btn-group">
 
                             <i class="fa fa-thumbs-up"><small class="text-muted number-of-likes-{{ video.id }}">({{ video.usersThatLike.count }})</small></i>&nbsp;
-                            <i class="fa fa-thumbs-down"><small class="text-muted number-of-dislikeslikes-{{ video.id }}">({{ video.usersThatDontLike.count }})</small></i>
+                            <i class="fa fa-thumbs-down"><small class="text-muted number-of-dislikes-{{ video.id }}">({{ video.usersThatDontLike.count }})</small></i>
                             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                                 {{ include('front/helper/_likes.html.twig', {'video':video}) }}
                             {% endif %}

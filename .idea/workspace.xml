@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/likes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/likes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/likes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/likes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191002114655.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/front/helper/_likes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191001154832.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VideoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VideoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/videos.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/search_results.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/search_results.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/video_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +181,7 @@
       <workItem from="1569853488400" duration="648000" />
       <workItem from="1569913191651" duration="34514000" />
       <workItem from="1570454595713" duration="50000" />
-      <workItem from="1570540276772" duration="5918000" />
+      <workItem from="1570540276772" duration="10747000" />
     </task>
     <servers />
   </component>
