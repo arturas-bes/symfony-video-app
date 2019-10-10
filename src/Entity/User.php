@@ -141,7 +141,7 @@ class User implements UserInterface
         return (string) $this->password;
     }
 
-    public function setPassword(string $password): self
+    public function setPassword(?string $password): self // ?string second way to prevent form error it marks it as optional
     {
         $this->password = $password;
 

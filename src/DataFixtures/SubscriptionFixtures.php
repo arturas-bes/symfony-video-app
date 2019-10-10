@@ -28,6 +28,13 @@ class SubscriptionFixtures extends Fixture
     {
         return [
             [
+                3, //user
+                Subscribtion::getPlanDataNameByIndex(2),
+                (new \DateTime())->modify('+ 100 year'),
+                'paid',
+                false
+            ], //super admin
+            [
                 4, //user
                 Subscribtion::getPlanDataNameByIndex(2),
                 (new \DateTime())->modify('+ 100 year'),

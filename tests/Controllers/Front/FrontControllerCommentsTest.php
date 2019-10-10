@@ -4,7 +4,7 @@
 | copyright netprogs.pl | available only at Udemy.com | further distribution is prohibited  ***
 |--------------------------------------------------------
 */
-namespace App\Tests\Controller\Front;
+namespace App\Tests\Controllers\Front;
 
 use App\Tests\RoleAdmin;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;

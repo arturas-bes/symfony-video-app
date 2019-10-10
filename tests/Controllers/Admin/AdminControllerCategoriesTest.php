@@ -1,5 +1,5 @@
 <?php
-namespace App\Tests\Controller\Admin;
+namespace App\Tests\Controllers\Admin;
 
 use App\Tests\RoleAdmin;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
