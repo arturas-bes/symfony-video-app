@@ -86,7 +86,7 @@ class CategoryTreeFrontPage extends CategoryTreeAbstract
         foreach ($categories_array as $value ) {
             // Add html for parents
             $catName = $this->slugger->slugify($value['name']); // slugifies name removes unnecessary symbols
-            $url = $this->urlGenerator->generate('video_list',
+            $url = $this->urlGenerator->generate('video_list.en',
                 ['categoryName'=>$catName,'id'=>$value['id']]);
             $this->categoryList .= $this->html_2 .$this->html_3. $url.$this->html_4. $value['name'] . $this->html_5;
             // check if children is not empty

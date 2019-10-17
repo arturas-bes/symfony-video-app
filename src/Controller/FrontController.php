@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use App\Utils\Interfaces\CacheInterface;
 
 class FrontController extends AbstractController
 {
@@ -38,6 +38,7 @@ class FrontController extends AbstractController
      * @param CategoryTreeFrontPage $categories
      * @param Request $request
      * @param VideoForNoValidSubscribtion $video_no_members
+     * @param CacheInterface $cache
      * @return Response
      */
     public function videoList(
@@ -45,24 +46,45 @@ class FrontController extends AbstractController
         $page,
         CategoryTreeFrontPage $categories,
         Request $request,
-        VideoForNoValidSubscribtion $video_no_members
+        VideoForNoValidSubscribtion $video_no_members,
+        CacheInterface $cache
     )
     {
-        $categories->getCategoryListAndParent($id);
-        $ids = $categories->getChildIds($id);
-        //using array push we add to an array the actual "parent" category
-        array_push($ids, $id);
+        $cache = $cache->cache;
 
-        $videos = $this->getDoctrine()
-            ->getRepository(Video::class)
-//            ->findAll();
-        ->findByChildIds($ids, $page, $request->get('sortby'));
+        $video_list = $cache->getItem('video_list'.$id.$page.$request->get('sortby'));
+//        $video_list->tag(['video_list']);
+        $video_list->expiresAfter(60);
 
-        return $this->render('front/video_list.html.twig', [
-            'subcategories' => $categories,
-            'videos' => $videos,
-            'video_no_members' => $video_no_members->check()
-        ]);
+        // if our list expired then we take data fron Db
+
+        if (!$video_list->isHit()) {
+            $ids = $categories->getChildIds($id);
+            array_push($ids, $id);
+
+            $videos = $this->getDoctrine()
+                ->getRepository(Video::class)
+                ->findByChildIds($ids, $page, $request->get('sortby'));
+
+            $categories->getCategoryListAndParent($id);
+
+            $response = $this->render('front/video_list.html.twig', [
+                'subcategories' => $categories,
+                'videos' => $videos,
+                'video_no_members' => $video_no_members->check()
+            ]);
+
+            $video_list->set($response);
+            $cache->save($video_list);
+        }
+
+//old code before cache
+//        $ids = $categories->getChildIds($id);
+//        //using array push we add to an array the actual "parent" category
+//        array_push($ids, $id);
+
+            //return cached item
+        return $video_list->get();
     }
 
     /**

@@ -11,6 +11,18 @@ trait RoleUser
 {
     public function setUp()
     {
+        parent::setUp();
+
+        // for cache tests start
+        self::bootKernel();
+        $container = self::$kernel->getContainer();
+        // gets special container that allows fetching private services
+        $container = self::$container;
+        $cache = self::$container->get('App\Utils\Interfaces\CacheInterface');
+        $this->cache = $cache->cache;
+        $this->cache->clear();
+        // end cache setup
+
         $this->client = static::createClient([], [
             'PHP_AUTH_USER' => 'keven@gmail.com',
             'PHP_AUTH_PW' => 'password',
@@ -23,6 +35,10 @@ trait RoleUser
 
     public function tearDown()
     {
+        parent::tearDown();
+        $this->cache->clear();
+        //cache start
+
         // these lines helps isolate databse so it will roll back after request is done
         //    $this->entityManager->rollBack();
         $this->entityManager->close();

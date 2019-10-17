@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * @Route("/admin")
@@ -24,9 +25,10 @@ class MainController extends AbstractController
      * @Route("/", name="admin_main_page")
      * @param Request $request
      * @param UserPasswordEncoderInterface $encoder
+     * @param TranslatorInterface $translator
      * @return RedirectResponse|Response
      */
-    public function index(Request $request, UserPasswordEncoderInterface $encoder)
+    public function index(Request $request, UserPasswordEncoderInterface $encoder, TranslatorInterface $translator)
     {
         $user = $this->getUser();
         // second argument fills up form with current data
@@ -45,7 +47,7 @@ class MainController extends AbstractController
             $user->setPassword($password);
             $em->persist($user);
             $em->flush();
-
+          //  $translated = $translator->trans('Your changes were saved!');
            $this->addFlash(
                'success',
                'Your changes were saved!'
@@ -63,7 +65,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/videos", name="videos")
+     * @Route({"en":"/videos","lt":"/vaizdo-irašai"}, name="videos")
      * @param CategoryTreeOptionList $categories
      * @return Response
      */

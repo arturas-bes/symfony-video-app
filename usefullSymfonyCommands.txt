@@ -22,3 +22,5 @@ Vimeo account :
 https://developer.vimeo.com/
 artazzs1
 password
+
+bin/console swiftmailer:spool:send --message-limit=10 --env=prod

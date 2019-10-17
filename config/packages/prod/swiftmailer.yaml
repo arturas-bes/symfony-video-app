@@ -1,0 +1,8 @@
+# See https://symfony.com/doc/current/email/dev_environment.html
+swiftmailer:
+#  We choosen file type here on prod because this course offers deployment on heroku which is on the free account doesnt offer memory storage
+    url: '%env(MAILER_URL)%'
+    spool:
+      type: file
+      path: '%kernel.project_dir%/var/spool'
+

@@ -73,7 +73,7 @@
             {% for label, messages in app.flashes %}
 
                 {% for message in messages %}
-                    <div class="alert alert-{{ label }}" role="alert">{{ message }}</div>
+                    <div class="alert alert-{{ label }}" role="alert">{{ message|trans }}</div>
                 {% endfor %}
 
             {% endfor %}

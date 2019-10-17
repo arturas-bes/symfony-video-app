@@ -69,7 +69,7 @@ class VideoFixtures extends Fixture
     {
         return [
 
-            ['Movies 1',289729765,4],
+            ['video',367009993,4],
             ['Movies 2',238902809,4],
             ['Movies 3',150870038,4],
             ['Movies 4',219727723,4],
