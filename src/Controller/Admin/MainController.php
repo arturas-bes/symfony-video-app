@@ -9,7 +9,9 @@ use App\Entity\Video;
 use App\Form\UserType;
 use App\Utils\CategoryTreeOptionList;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -22,7 +24,7 @@ class MainController extends AbstractController
      * @Route("/", name="admin_main_page")
      * @param Request $request
      * @param UserPasswordEncoderInterface $encoder
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return RedirectResponse|Response
      */
     public function index(Request $request, UserPasswordEncoderInterface $encoder)
     {
@@ -62,34 +64,21 @@ class MainController extends AbstractController
 
     /**
      * @Route("/videos", name="videos")
+     * @param CategoryTreeOptionList $categories
+     * @return Response
      */
-    public function videos()
+    public function videos(CategoryTreeOptionList $categories)
     {
         if ($this->isGranted('ROLE_ADMIN')) {
-            $videos = $this->getDoctrine()->getRepository(Video::class)->findAll();
+            $categories->getCategoryList($categories->buildTree());
+            $videos = $this->getDoctrine()->getRepository(Video::class)->findBy([],['title' => 'ASC']);
         } else {
+            $categories = null;
             $videos = $this->getUser()->getLikedVideos();
         }
         return $this->render('admin/videos.html.twig', [
-            'videos' => $videos
-        ]);
-    }
-
-    /**
-     * @param CategoryTreeOptionList $categories
-     * @param null $editedCategory
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function getAllCategories(CategoryTreeOptionList $categories, $editedCategory = null)
-    {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
-
-        $categories->getCategoryList($categories->buildTree());
-
-        return $this->render('admin/helper/_all_categories_option_list.html.twig', [
-            'categories' => $categories,
-            'editedCategory' => $editedCategory
-
+            'videos' => $videos,
+            'categories' => $categories
         ]);
     }
 

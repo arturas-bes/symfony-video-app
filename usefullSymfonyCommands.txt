@@ -14,3 +14,11 @@ maxmemory-policy allkeys-lru
 
 sudo systemctl enable redis-server.service
 sudo service apache2 restart
+
+
+Postman chrome extension help test api connections
+
+Vimeo account :
+https://developer.vimeo.com/
+artazzs1
+password

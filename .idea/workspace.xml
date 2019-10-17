@@ -2,27 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191010082632.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSubscriptionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerUserAccountTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerUsersTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerSubscriptionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/services_dev.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/VideoType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191017103244.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Interfaces/UploaderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/LocalUploader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/VimeoUploader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/upload_video_vimeo.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/SuperAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/SuperAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/SubscriptionFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/SubscriptionFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191009153058.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191010082917.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/categories.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/categories.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/users.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerCategoriesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerCategoriesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/upload_video.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/upload_video_locally.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/videos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/video_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_details.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCommentsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerLikesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerLikesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerSecurityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerVideoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerVideoTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usefullSymfonyCommands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usefullSymfonyCommands.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +46,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,21 +179,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Controllers/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/config/packages/prod" />
+      <recent name="$PROJECT_DIR$/config/packages/test" />
+      <recent name="$PROJECT_DIR$/config/packages/dev" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/tests/Controllers" />
       <recent name="$PROJECT_DIR$/tests/Controllers/Front" />
       <recent name="$PROJECT_DIR$/src/Controller/Admin" />
       <recent name="$PROJECT_DIR$/assets/js" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests/Controllers/Admin" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,7 +228,8 @@
       <workItem from="1570454595713" duration="50000" />
       <workItem from="1570540276772" duration="17051000" />
       <workItem from="1570625607302" duration="8691000" />
-      <workItem from="1570687794908" duration="8269000" />
+      <workItem from="1570687794908" duration="19508000" />
+      <workItem from="1571307870654" duration="5052000" />
     </task>
     <servers />
   </component>

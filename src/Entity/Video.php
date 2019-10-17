@@ -6,7 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Index as Index;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\VideoRepository")
  * @ORM\Table(name="videos",
@@ -15,9 +15,10 @@ use Doctrine\ORM\Mapping\Index as Index;
 class Video
 {
     //public const videoForNotLoggedIn = 113716040; //vimeo video id
-    public const videoForNotLoggedInOrNoMembers = 113716040; //vimeo video id
+    public const videoForNotLoggedInOrNoMembers = 'https://player.vimeo.com/video/113716040'; //vimeo video id
     public const VimeoPath = 'https://player.vimeo.com/video/';
     public const perPage = 5; //pagination items on page
+    public const uploadFolder = '/uploads/videos/';
 
     /**
      * @ORM\Id()
@@ -67,6 +68,12 @@ class Video
      */
     private $usersThatDontLike;
 
+    /**
+     * @Assert\NotBlank(message="Please upload the video as a MP4 file.")
+     * @Assert\File(mimeTypes={"video/mp4"})
+     */
+    private $uploaded_video;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -98,9 +105,15 @@ class Video
 
     public function getVimeoId(): ?string
     {
-
-        return $this->path;
+        // if upload from local get this path: /uploads/videos/2136396.mp4
+        if (strpos($this->path, self::uploadFolder) !== false) {
+            return $this->path;
+        }
+        // else we get ann array and explode and return the last element this path: https://player.vimeo.com/video/289729765
+        $array = explode('/', $this->getPath());
+        return end($array);
     }
+
     public function setPath(string $path): self
     {
         $this->path = $path;
@@ -211,6 +224,18 @@ class Video
         if ($this->usersThatDontLike->contains($usersThatDontLike)) {
             $this->usersThatDontLike->removeElement($usersThatDontLike);
         }
+
+        return $this;
+    }
+
+    public function getUploadedVideo()
+    {
+        return $this->uploaded_video;
+    }
+
+    public function setUploadedVideo( $uploaded_video): self
+    {
+        $this->uploaded_video = $uploaded_video;
 
         return $this;
     }
