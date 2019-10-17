@@ -85,6 +85,7 @@ class SuperAdminController extends AbstractController
     {
         if(!is_numeric($vimeo_id)) {
             // video stored localy video duration can be handled here
+            //TODO Handle set video duration on local side
 
             return $this->redirectToRoute('videos');
         }
