@@ -38,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/FrontControllerCommentsTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RoleAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RoleAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/RoleUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RoleUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usefullSymfonyCommands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usefullSymfonyCommands.txt" afterDir="false" />
@@ -242,7 +243,7 @@
       <workItem from="1570625607302" duration="8691000" />
       <workItem from="1570687794908" duration="19508000" />
       <workItem from="1571307870654" duration="13028000" />
-      <workItem from="1571321873033" duration="3459000" />
+      <workItem from="1571321873033" duration="3788000" />
     </task>
     <servers />
   </component>
