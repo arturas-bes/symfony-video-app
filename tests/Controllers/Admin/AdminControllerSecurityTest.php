@@ -2,10 +2,10 @@
 
 namespace App\Tests\Controllers\Admin;
 
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Panther\PantherTestCase;
 
-class AdminControllerSecurityTest extends PantherTestCase
+class AdminControllerSecurityTest extends WebTestCase
 {
     /**
      * @param string $httpMethod

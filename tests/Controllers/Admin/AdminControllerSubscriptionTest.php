@@ -2,10 +2,10 @@
 
 namespace App\Tests\Controllers\Admin;
 
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use App\Tests\RoleUser;
 
-class AdminControllerSubscriptionTest extends PantherTestCase
+class AdminControllerSubscriptionTest extends WebTestCase
 {
     use RoleUser;
 

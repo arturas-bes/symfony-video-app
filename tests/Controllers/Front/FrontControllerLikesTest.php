@@ -4,9 +4,9 @@ namespace App\Tests\Controllers\Front;
 
 
 use App\Tests\RoleUser;
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class FrontControllerLikesTest extends PantherTestCase
+class FrontControllerLikesTest extends WebTestCase
 {
     use RoleUser;
 

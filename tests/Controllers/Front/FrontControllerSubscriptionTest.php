@@ -4,9 +4,9 @@ namespace App\Tests\Controllers\Front;
 
 use App\Entity\Subscribtion;
 use App\Tests\RoleUser;
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class FrontControllerSubscriptionTest extends PantherTestCase
+class FrontControllerSubscriptionTest extends WebTestCase
 {
     use RoleUser;
 

@@ -3,9 +3,9 @@
 namespace App\Tests\Controllers\Front;
 
 
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class FrontControllerSecurityTest extends PantherTestCase
+class FrontControllerSecurityTest extends WebTestCase
 {
     /**
      * @param string $url

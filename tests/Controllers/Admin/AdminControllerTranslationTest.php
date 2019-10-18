@@ -3,9 +3,9 @@
 namespace App\Tests\Controllers\Admin;
 
 use App\Tests\RoleUser;
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class AdminControllerTranslationTest extends PantherTestCase
+class AdminControllerTranslationTest extends WebTestCase
 {
     use RoleUser;
 

@@ -3,10 +3,10 @@
 namespace App\Tests\Controllers\Admin;
 
 use App\Entity\Video;
-use Symfony\Component\Panther\PantherTestCase;
+use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use App\Tests\RoleAdmin;
 
-class AdminControllerVideosTest extends PantherTestCase
+class AdminControllerVideosTest extends WebTestCase
 {
     use RoleAdmin;
 
