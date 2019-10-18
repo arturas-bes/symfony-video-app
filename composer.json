@@ -30,7 +30,8 @@
     "symfony/web-server-bundle": "4.3.*",
     "symfony/yaml": "4.3.*",
     "ext-intl" : "*",
-    "ext-pdo_sqlite" : "*"
+    "ext-pdo_sqlite" : "*",
+    "ext-mbstring": "*"
   },
   "require-dev": {
     "dama/doctrine-test-bundle": "^5.0",
