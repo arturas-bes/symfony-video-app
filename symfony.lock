@@ -178,7 +178,7 @@
         "version": "v4.3.4"
     },
     "symfony/cache-contracts": {
-        "version": "v1.1.5"
+        "version": "v1.1.7"
     },
     "symfony/config": {
         "version": "v4.3.4"
@@ -276,10 +276,10 @@
         ]
     },
     "symfony/http-client": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/http-client-contracts": {
-        "version": "v1.1.6"
+        "version": "v1.1.7"
     },
     "symfony/http-foundation": {
         "version": "v4.3.4"
@@ -346,7 +346,7 @@
         "version": "v1.12.0"
     },
     "symfony/process": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/profiler-pack": {
         "version": "v1.0.4"
@@ -382,13 +382,13 @@
         ]
     },
     "symfony/security-core": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/security-csrf": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/security-guard": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/security-http": {
         "version": "v4.3.4"
@@ -433,7 +433,7 @@
         ]
     },
     "symfony/translation-contracts": {
-        "version": "v1.1.6"
+        "version": "v1.1.7"
     },
     "symfony/twig-bridge": {
         "version": "v4.3.4"
@@ -469,7 +469,7 @@
         "version": "v4.3.4"
     },
     "symfony/var-exporter": {
-        "version": "v4.3.4"
+        "version": "v4.3.5"
     },
     "symfony/web-profiler-bundle": {
         "version": "3.3",
