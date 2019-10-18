@@ -108,9 +108,6 @@
     "egulias/email-validator": {
         "version": "2.1.11"
     },
-    "facebook/webdriver": {
-        "version": "1.7.1"
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -310,9 +307,6 @@
     },
     "symfony/orm-pack": {
         "version": "v1.0.6"
-    },
-    "symfony/panther": {
-        "version": "v0.5.2"
     },
     "symfony/phpunit-bridge": {
         "version": "4.3",
