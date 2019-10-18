@@ -2,46 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/prod/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/videos/4394078.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/videos/467010.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/videos/9714753.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/AdminChangesDataSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listeners/NewVideoListener.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/FileCache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/Interfaces/CacheInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/RedisCache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/emails/new_video.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerTranslationTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerVideosTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCacheTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/messages.lt.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_dev.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_heroku.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/framework_heroku.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/heroku/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/heroku/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/heroku/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/services_heroku.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191018065617.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-migrations" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/php-parse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/security-checker" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/simple-phpunit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bin/var-dump-server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191017103244.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/CategoryTreeAdminList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/CategoryTreeAdminList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/CategoryTreeFrontPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/CategoryTreeFrontPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/edit_category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/AdminControllerSecurityTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controllers/Front/FrontControllerCommentsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controllers/Admin/FrontControllerCommentsTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/RoleAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RoleAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/RoleUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/RoleUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usefullSymfonyCommands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/usefullSymfonyCommands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191017145723.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,25 +173,25 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/packages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/packages" />
+      <recent name="$PROJECT_DIR$/tests/Controllers/Front" />
+      <recent name="$PROJECT_DIR$/config/packages/prod" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/config/packages/test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/tests/Controllers" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/tests/Controllers/Front" />
       <recent name="$PROJECT_DIR$/src/Controller/Admin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests/Controllers/Front" />
-      <recent name="$PROJECT_DIR$/config/packages/prod" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/config/packages/test" />
-      <recent name="$PROJECT_DIR$/config/packages/dev" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -244,6 +226,7 @@
       <workItem from="1570687794908" duration="19508000" />
       <workItem from="1571307870654" duration="13028000" />
       <workItem from="1571321873033" duration="3788000" />
+      <workItem from="1571379026739" duration="2971000" />
     </task>
     <servers />
   </component>
