@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_dev.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_heroku.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/framework_heroku.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/heroku/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/heroku/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/heroku/twig.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/services_heroku.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191018065617.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/doctrine-migrations" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/php-parse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/security-checker" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/simple-phpunit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/bin/var-dump-server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191017145723.php" beforeDir="false" />
-    </list>
+    <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +203,7 @@
       <workItem from="1570687794908" duration="19508000" />
       <workItem from="1571307870654" duration="13028000" />
       <workItem from="1571321873033" duration="3788000" />
-      <workItem from="1571379026739" duration="2971000" />
+      <workItem from="1571379026739" duration="3284000" />
     </task>
     <servers />
   </component>
