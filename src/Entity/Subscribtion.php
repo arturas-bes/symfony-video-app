@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Subscribtion
 {
+    public const  ProPlan = 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RNAUUJETXH2DY';
+    public const  EnterprisePlan = 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R9S3YJM9EMJ4S';
+
     private static $planDataNames = ['free', 'pro', 'enterprise'];
 
     private static $planDataPrices = [
