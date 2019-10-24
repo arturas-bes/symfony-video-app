@@ -1,16 +1,11 @@
 <?php
-
 namespace App\Controller;
-
-use App\Controller\Traits\SaveSubscription;
 use App\Entity\Subscribtion;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
-
 class SubscriptionController extends AbstractController
 {
-    use SaveSubscription;
     /**
      * @Route("/pricing", name="pricing")
      */
@@ -21,20 +16,20 @@ class SubscriptionController extends AbstractController
             'price' => Subscribtion::getPlanDataPrices()
         ]);
     }
-
     /**
-     * @Route("/payment/{paypal}", name="payment", defaults={"paypal":false})
+     * @Route("/payment", name="payment")
      */
-    public function payment($paypal, SessionInterface $session)
+    public function payment(SessionInterface $session)
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_REMEMBERED');
-
-        if ($paypal) {
-            $this->saveSubscription($session->get('planName'), $this->getUser());
-
-            return $this->redirectToRoute('admin_main_page');
+        if($session->get('planName') == 'enterprise')
+        {
+            $subscribe = Subscribtion::EnterprisePlan;
         }
-        return $this->render('front/payment.html.twig', [
-        ]);
+        else
+        {
+            $subscribe = Subscribtion::ProPlan;
+        }
+        return $this->render('front/payment.html.twig',['subscribe'=>$subscribe]);
     }
 }
