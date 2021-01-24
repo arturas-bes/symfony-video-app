@@ -27,9 +27,9 @@
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018 <a href="{{ path('main_page') }}">main page</a></p>
+        <p class="mt-5 mb-3 text-muted">2021 &copy; Arturas Bespalovas <a href="{{ path('main_page') }}">main page</a></p>
         {#        name attribute is according to name in security.yaml file token is security prevention from hacking a from     #}
-
+        <small class="d-block mb-3 text-muted"></small>
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
     </form>
 

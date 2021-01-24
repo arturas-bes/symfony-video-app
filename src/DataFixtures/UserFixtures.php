@@ -28,7 +28,6 @@ class UserFixtures extends Fixture
             $user->setEmail($email);
             $user->setPassword($this->passwordEncoder->encodePassword($user, $password));
             $user->setRoles($roles);
-            $user->setVimeoApiKey($api_key);
             $manager->persist($user);
         }
         $manager->flush();

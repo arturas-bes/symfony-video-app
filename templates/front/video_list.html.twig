@@ -29,9 +29,7 @@
                     </div>
                 </div>
 
-                <div class="form-row align-items-center ml-3">
-                    {{ include('front/helper/_sort.html.twig') }}
-                </div>
+
             </div>
         </div>
     </section>
@@ -49,8 +47,5 @@
 {% endblock %}
 {% block customjavascripts %}
 {{parent()}}
-{% if app.user %}
-<script src="{{asset('assets/js/likes.js')}}"></script>
-{% endif %}
 {% endblock %}
 

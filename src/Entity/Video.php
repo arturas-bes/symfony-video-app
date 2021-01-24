@@ -50,36 +50,11 @@ class Video
     private $category;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="video")
-     */
-    private $comments;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\User", inversedBy="likedVideos")
-     * Default table name on many to many is created by symfony convention let's change a table name thisway:
-     * @ORM\JoinTable(name="likes")
-     */
-    private $usersThatLike;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\User", inversedBy="dislikedVideos")
-     * Default table name on many to many is created by symfony convention let's change a table name thisway:
-     * @ORM\JoinTable(name="dislikes")
-     */
-    private $usersThatDontLike;
-
-    /**
      * @Assert\NotBlank(message="Please upload the video as a MP4 file.")
      * @Assert\File(mimeTypes={"video/mp4"})
      */
     private $uploaded_video;
 
-    public function __construct()
-    {
-        $this->comments = new ArrayCollection();
-        $this->usersThatLike = new ArrayCollection();
-        $this->usersThatDontLike = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -141,89 +116,6 @@ class Video
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Comment[]
-     */
-    public function getComments(): Collection
-    {
-        return $this->comments;
-    }
-
-    public function addComment(Comment $comment): self
-    {
-        if (!$this->comments->contains($comment)) {
-            $this->comments[] = $comment;
-            $comment->setVideo($this);
-        }
-
-        return $this;
-    }
-
-    public function removeComment(Comment $comment): self
-    {
-        if ($this->comments->contains($comment)) {
-            $this->comments->removeElement($comment);
-            // set the owning side to null (unless already changed)
-            if ($comment->getVideo() === $this) {
-                $comment->setVideo(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|User[]
-     */
-    public function getUsersThatLike(): Collection
-    {
-        return $this->usersThatLike;
-    }
-
-    public function addUsersThatLike(User $usersThatLike): self
-    {
-        if (!$this->usersThatLike->contains($usersThatLike)) {
-            $this->usersThatLike[] = $usersThatLike;
-        }
-
-        return $this;
-    }
-
-    public function removeUsersThatLike(User $usersThatLike): self
-    {
-        if ($this->usersThatLike->contains($usersThatLike)) {
-            $this->usersThatLike->removeElement($usersThatLike);
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|User[]
-     */
-    public function getUsersThatDontLike(): Collection
-    {
-        return $this->usersThatDontLike;
-    }
-
-    public function addUsersThatDontLike(User $usersThatDontLike): self
-    {
-        if (!$this->usersThatDontLike->contains($usersThatDontLike)) {
-            $this->usersThatDontLike[] = $usersThatDontLike;
-        }
-
-        return $this;
-    }
-
-    public function removeUsersThatDontLike(User $usersThatDontLike): self
-    {
-        if ($this->usersThatDontLike->contains($usersThatDontLike)) {
-            $this->usersThatDontLike->removeElement($usersThatDontLike);
-        }
 
         return $this;
     }

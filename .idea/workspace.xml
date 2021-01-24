@@ -2,14 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b022cfec-4a90-49e3-83a7-0d77477153af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PaypalController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/PaypalIPN.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/videos/1763557.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/videos/6396614.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20210124144519.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony-application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SubscriptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Subscribtion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Subscribtion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/payment.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/payment.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/SuperAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/SuperAdmin/SuperAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PaypalController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SubscriptionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Traits/Likes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Traits/SaveSubscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CommentFixtures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/SubscriptionFixtures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/VideoFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Subscribtion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191017145723.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommentRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SubscribtionRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/VideoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VideoRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/PaypalIPN.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/RedisCache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/VideoForNoValidSubscribtion.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/VimeoUploader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/my_profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/upload_video_vimeo.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/videos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/helper/_sort.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/helper/_videos.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/search_results.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/video_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/video_list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/video_list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/subscription/index.html.twig" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +54,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -44,6 +79,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -153,6 +196,10 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -161,6 +208,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -178,18 +226,7 @@
       <recent name="$PROJECT_DIR$/config/packages/dev" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -212,24 +249,24 @@
       <workItem from="1571321873033" duration="4057000" />
       <workItem from="1571378938659" duration="87000" />
       <workItem from="1571839582921" duration="3370000" />
+      <workItem from="1611497878806" duration="4795000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

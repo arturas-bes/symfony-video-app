@@ -58,7 +58,6 @@ class MainController extends AbstractController
             $is_invalid = 'is_invalid';
         }
             return $this->render('admin/my_profile.html.twig',[
-            'subscription' => $this->getUser()->getSubscription(),
                 'form' => $form->createView(),
                 'is_invalid' => $is_invalid,
         ]);
@@ -74,32 +73,11 @@ class MainController extends AbstractController
         if ($this->isGranted('ROLE_ADMIN')) {
             $categories->getCategoryList($categories->buildTree());
             $videos = $this->getDoctrine()->getRepository(Video::class)->findBy([],['title' => 'ASC']);
-        } else {
-            $categories = null;
-            $videos = $this->getUser()->getLikedVideos();
         }
         return $this->render('admin/videos.html.twig', [
             'videos' => $videos,
             'categories' => $categories
         ]);
-    }
-
-    /**
-     * @Route("/cancel-plan", name="cancel_plan")
-     */
-    public function cancelPlan()
-    {
-        $user = $this->getUser();
-        $subscribition = $user->getSubscription();
-        $subscribition->setValidTo(new \DateTime());
-        $subscribition->setPaymentStatus(null);
-        $subscribition->setPlan('canceled');
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($user);
-        $em->persist($subscribition);
-        $em->flush();
-
-        return $this->redirectToRoute('admin_main_page');
     }
 
     /**

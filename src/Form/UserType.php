@@ -34,13 +34,6 @@ class UserType extends AbstractType
             ))
 
         ;
-
-        if ($user && in_array('ROLE_ADMIN', $user->getRoles())) {
-            $builder->add('vimeo_api_key', TextType::class,[
-                'empty_data' => '', // prevent error for null value in field
-                    ]
-                );
-        }
     }
 
     public function configureOptions(OptionsResolver $resolver)

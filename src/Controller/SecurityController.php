@@ -3,9 +3,6 @@
 
 namespace App\Controller;
 
-
-use App\Controller\Traits\SaveSubscription;
-use App\Entity\Subscribtion;
 use App\Entity\User;
 use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,23 +16,16 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
-    use SaveSubscription;
-
     /**
-     * @Route("/register/{plan}", name="register")
+     * @Route("/register", name="register")
      * @param Request $request
      * @param UserPasswordEncoderInterface $encoder
      * @param SessionInterface $session
      * @param $plan
      * @return Response
      */
-    public function register(Request $request, UserPasswordEncoderInterface $encoder, SessionInterface $session, $plan)
+    public function register(Request $request, UserPasswordEncoderInterface $encoder, SessionInterface $session)
     {
-        //when user enters the page catch get request and set plan to session storage
-        if ($request->isMethod('GET')) {
-            $session->set('planName', $plan);
-            $session->set('planPrice', Subscribtion::getPlanDataPriceByName($plan));
-        }
 
         $user = new User;
         $form = $this->createForm(UserType::class, $user);
@@ -54,15 +44,6 @@ class SecurityController extends AbstractController
             //subscription
             $date = new \DateTime();
             $date->modify('+1 month');
-            $subscription = new Subscribtion();
-            $subscription->setValidTo($date);
-            $subscription->setPlan($session->get('planName'));
-            $subscription->setFreePlanUsed(false);
-            if ($plan == Subscribtion::getPlanDataNameByIndex(0)) {
-                $subscription->setFreePlanUsed(true);
-                $subscription->setPaymentStatus('paid');
-            }
-            $user->setSubscription($subscription);
 
 
             $em->persist($user);
@@ -71,16 +52,10 @@ class SecurityController extends AbstractController
 //            Handle set user token and redirect to admin panel
             $this->loginUserAutomatically($user, $password);
 
-            if ($this->isGranted('IS_AUTHENTICATED_REMEMBERED') &&
-                $plan == Subscribtion::getPlanDataNameByIndex(0)) //free plan
-            {
-                $this->saveSubscription($plan, $this->getUser());
+            if ($this->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
 
                 return $this->redirectToRoute('admin_main_page');
 
-            } elseif ($this->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-
-                return $this->redirectToRoute('payment');
             }
         }
 
